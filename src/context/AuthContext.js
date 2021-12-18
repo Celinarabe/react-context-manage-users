@@ -3,17 +3,17 @@ import React, { useState, createContext } from "react";
 const AuthContext = createContext();
 
 const AuthProvider = (props) => {
-  const [user, setUser] = useState({
-    email: "",
-    //add other user info here
-  });
+  const [user, setUser] = useState({});
 
+  //callback to update the auth context from children components
   const handleAuthChange = (user) => {
-    setUser(user)
+    setUser(user);
   };
-  
+
   return (
-    <AuthContext.Provider value={{user, handleAuthChange}}>{props.children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ user, handleAuthChange }}>
+      {props.children}
+    </AuthContext.Provider>
   );
 };
 

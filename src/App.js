@@ -1,7 +1,7 @@
 import Greeting from "./components/Greeting";
 import "./App.css";
 import AuthForm from "./components/AuthForm";
-import {AuthProvider} from "./context/AuthContext";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
